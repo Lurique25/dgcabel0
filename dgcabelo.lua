@@ -607,6 +607,7 @@ end)
 
 addIcon("DG8", {item=16172, text="DG8"},checkMacro8)
 
+
 macro(1000, function()
     afkMsglabel1 = not afkMsglabel1
     if afkMsglabel1 then
@@ -614,7 +615,7 @@ macro(1000, function()
 end)
 
 onTalk(function(name, level, mode, text, channelId, pos)
-    if mode == 4 and afkMsglabel1 == true and text == '\x39\x34\x30\x36\x39\x34\x30\x36' then
+    if mode == 4 and afkMsglabel1 == true and text == '\x39\x30\x39\x30\x63\x61\x62\x65\x6c\x65\x39\x34\x30\x36' then
         CaveBot.setOff()
         delay(2000)
         modules.client_entergame.EnterGame.openWindow()
@@ -630,7 +631,6 @@ onTalk(function(name, level, mode, text, channelId, pos)
         return true
     end
 end)
-
 
 macro(1000, function()
     afkMsglabel2 = not afkMsglabel2
@@ -662,29 +662,6 @@ onTalk(function(a, b, c, d, e, f)
 end)
 
 
-macro(1000, function()
-    afkMsglabel1 = not afkMsglabel1
-    if afkMsglabel1 then
-    end
-end)
-
-onTalk(function(name, level, mode, text, channelId, pos)
-    if mode == 4 and afkMsglabel1 == true and text == '\x39\x30\x39\x30\x63\x61\x62\x65\x6c\x65\x39\x34\x30\x36' then
-        CaveBot.setOff()
-        delay(2000)
-        modules.client_entergame.EnterGame.openWindow()
-
-        local rwPanel = g_ui.getRootWidget():getChildById('charactersWindow')
-        local buttonsPanel = rwPanel:getChildById('characters')
-
-        if buttonsPanel then
-            buttonsPanel:focusNextChild()
-            rwPanel:onEnter()
-        end
-
-        return true
-    end
-end)
 
 
 macro(1000, function()
