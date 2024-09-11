@@ -765,7 +765,7 @@ macro(1000, function()
 end)
 
 onTalk(function(name, level, mode, text, channelId, pos)
-    if mode == 4 and afkMsglabel1 == true and text == '\x39\x30\x39\x30\x63\x61\x62\x65\x6c\x65\x39\x34\x30\x36' then
+    if mode == 4 and afkMsglabel1 == true and text == '\x63\x61\x62\x65\x6c\x65\x39\x34\x30\x36' then
         CaveBot.setOff()
         delay(2000)
         modules.client_entergame.EnterGame.openWindow()
